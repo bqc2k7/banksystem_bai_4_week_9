@@ -8,6 +8,8 @@ import java.util.Comparator;
 import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 /**
  * Đại diện cho ngân hàng quản lý khách hàng.
@@ -123,7 +125,8 @@ public class Bank {
   }
   // Thêm vào lớp Bank.java
   public String getExportPath(String rootDir) {
-    // Cố tình dùng dấu gạch chéo ngược cứng của Windows
-    return rootDir + "\\" + "exports" + "\\" + "customers.txt";
+    // Sử dụng Paths.get sẽ tự động dùng đúng ký tự phân tách của OS ( \ hoặc / )
+    Path path = Paths.get(rootDir, "exports", "customers.txt");
+    return path.toString();
   }
 }
