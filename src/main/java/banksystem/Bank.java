@@ -1,15 +1,16 @@
 package banksystem;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 
 /**
  * Đại diện cho ngân hàng quản lý khách hàng.
@@ -123,6 +124,7 @@ public class Bank {
     }
     return sb.toString().trim();
   }
+
   // Thêm vào lớp Bank.java
   public String getExportPath(String rootDir) {
     // Sử dụng Paths.get sẽ tự động dùng đúng ký tự phân tách của OS ( \ hoặc / )

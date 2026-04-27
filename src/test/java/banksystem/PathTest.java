@@ -1,21 +1,19 @@
 package banksystem;
 
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+
 import java.io.File;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+/**
+ * Lớp kiểm thử đa nền tảng cho xử lý đường dẫn tệp.
+ */
 public class PathTest {
 
-  // Đã comment (hoặc xóa) hàm test lỗi để CI/CD có thể pass trên Linux/Mac
-  /*
-  @Test
-  public void testExportPath() {
-    Bank bank = new Bank();
-    String result = bank.getExportPath("data");
-    assertEquals("data\\exports\\customers.txt", result);
-  }
-  */
-
+  /**
+   * Kiểm thử tạo đường dẫn tương thích với mọi hệ điều hành.
+   */
   @Test
   public void testExportPathRefactored() {
     Bank bank = new Bank();
